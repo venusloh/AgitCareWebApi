@@ -16,8 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
   } else {
-    // No user is signed in.
-
+    //User Not Signed In
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
 
@@ -35,10 +34,21 @@ function login(){
     var errorMessage = error.message;
 
     window.alert("Error : " + errorMessage);
+    console.log(errorCode);
 
     // ...
   });
 
+}
+
+function signUp(){
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+
+  const promise = firebase.auth().createUserWithEmailAndPassword(email.value,password.value);
+  //
+  promise.catch(e=>alert(e.message));
+  alert("SignUp Successfully");
 }
 
 function logout(){

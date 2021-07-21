@@ -77,6 +77,7 @@ addModal.classList.add('modal-show');
   addModalForm.Duration.value = doc.data().Duration;
 });
 
+
 // User click anyware outside the modal
 window.addEventListener('click', e => {
   if(e.target === addModal) {
