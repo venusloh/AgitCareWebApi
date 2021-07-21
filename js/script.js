@@ -23,7 +23,6 @@ const renderUser = doc => {
       <td>${doc.data().Role}</td>
       <td>${doc.data().Result}</td>
       <td>${doc.data().Health}</td>
-      <td>${doc.data().Duration}</td>
       <td>
         <button class="btn btn-edit">Edit</button>
         <button class="btn btn-delete">Delete</button>
@@ -47,7 +46,6 @@ const renderUser = doc => {
     editModalForm.Role.value = doc.data().Role;
     editModalForm.Result.value = doc.data().Result;
     editModalForm.Health.value = doc.data().Health;
-    editModalForm.Duration.value = doc.data().Duration;
 
     console.log(id);
   });
@@ -74,7 +72,6 @@ addModal.classList.add('modal-show');
   addModalForm.Role.value = doc.data().Role;
   addModalForm.Result.value = doc.data().Result;
   addModalForm.Health.value = doc.data().Health;
-  addModalForm.Duration.value = doc.data().Duration;
 });
 
 
@@ -125,7 +122,6 @@ addModalForm.addEventListener('submit', e => {
     Role: addModalForm.Role.value,
     Result: addModalForm.Result.value,
     Health: addModalForm.Health.value,
-    Duration: addModalForm.Duration.value,
   });
   modalWrapper.classList.remove('modal-show');
 });
@@ -140,7 +136,6 @@ editModalForm.addEventListener('submit', e => {
     Role: editModalForm.Role.value,
     Result: editModalForm.Result.value,
     Health: editModalForm.Health.value,
-    Duration: editModalForm.Duration.value,
   });
   editModal.classList.remove('modal-show');
   
