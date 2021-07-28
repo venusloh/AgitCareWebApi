@@ -22,7 +22,7 @@ const renderUser = doc => {
       <td>${doc.data().Gender}</td>
       <td>${doc.data().Role}</td>
       <td>${doc.data().Result}</td>
-      <td>${doc.data().Health}</td>
+      <td>${doc.data().Score}</td>
       <td>
         <button class="btn btn-edit">Edit</button>
         <button class="btn btn-delete">Delete</button>
@@ -45,7 +45,7 @@ const renderUser = doc => {
     editModalForm.Gender.value = doc.data().Gender;
     editModalForm.Role.value = doc.data().Role;
     editModalForm.Result.value = doc.data().Result;
-    editModalForm.Health.value = doc.data().Health;
+    editModalForm.Score.value = doc.data().Score;
 
     console.log(id);
   });
@@ -71,7 +71,7 @@ addModal.classList.add('modal-show');
   addModalForm.Gender.value = doc.data().Gender;
   addModalForm.Role.value = doc.data().Role;
   addModalForm.Result.value = doc.data().Result;
-  addModalForm.Health.value = doc.data().Health;
+  addModalForm.Score.value = doc.data().Score;
 });
 
 
@@ -121,7 +121,7 @@ addModalForm.addEventListener('submit', e => {
     Gender: addModalForm.Gender.value,
     Role: addModalForm.Role.value,
     Result: addModalForm.Result.value,
-    Health: addModalForm.Health.value,
+    Score: addModalForm.Score.value,
   });
   modalWrapper.classList.remove('modal-show');
 });
@@ -135,7 +135,7 @@ editModalForm.addEventListener('submit', e => {
     Gender: editModalForm.Gender.value,
     Role: editModalForm.Role.value,
     Result: editModalForm.Result.value,
-    Health: editModalForm.Health.value,
+    Score: editModalForm.Score.value,
   });
   editModal.classList.remove('modal-show');
   
