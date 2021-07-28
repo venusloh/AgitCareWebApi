@@ -42,10 +42,16 @@ function login(){
 }
 
 function signUp(){
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
-
-  const promise = firebase.auth().createUserWithEmailAndPassword(email.value,password.value);
+  var email = document.getElementById("email").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var data = {
+    Email: email,
+    Username: username
+  }
+  const promise = firebase.auth().createUserWithEmailAndPassword(email,password).then(cred =>  {
+    return db.collection('users').doc(cred.user.uid).set(data)
+  })
   //
   promise.catch(e=>alert(e.message));
   alert("SignUp Successfully");
