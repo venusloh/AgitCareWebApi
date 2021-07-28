@@ -21,6 +21,7 @@ const renderUser = doc => {
       <td>${doc.data().Username}</td>
       <td>${doc.data().Gender}</td>
       <td>${doc.data().Role}</td>
+      <td>${doc.data().Scenario}</td>
       <td>${doc.data().Result}</td>
       <td>${doc.data().Score}</td>
       <td>
@@ -44,6 +45,7 @@ const renderUser = doc => {
     editModalForm.Username.value = doc.data().Username;
     editModalForm.Gender.value = doc.data().Gender;
     editModalForm.Role.value = doc.data().Role;
+    editModalForm.Scenario.value = doc.data().Scenario;
     editModalForm.Result.value = doc.data().Result;
     editModalForm.Score.value = doc.data().Score;
 
@@ -70,6 +72,7 @@ addModal.classList.add('modal-show');
   addModalForm.Username.value = doc.data().Username;
   addModalForm.Gender.value = doc.data().Gender;
   addModalForm.Role.value = doc.data().Role;
+  addModalForm.Scenario.value = doc.data().Scenario;
   addModalForm.Result.value = doc.data().Result;
   addModalForm.Score.value = doc.data().Score;
 });
@@ -120,6 +123,7 @@ addModalForm.addEventListener('submit', e => {
     Username: addModalForm.Username.value,
     Gender: addModalForm.Gender.value,
     Role: addModalForm.Role.value,
+    Scenario: addModalForm.Scenario.value,
     Result: addModalForm.Result.value,
     Score: addModalForm.Score.value,
   });
@@ -134,6 +138,7 @@ editModalForm.addEventListener('submit', e => {
     Username: editModalForm.Username.value,
     Gender: editModalForm.Gender.value,
     Role: editModalForm.Role.value,
+    Scenario: editModalForm.Scenario.value,
     Result: editModalForm.Result.value,
     Score: editModalForm.Score.value,
   });
