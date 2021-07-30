@@ -1,11 +1,12 @@
 class User {
-    constructor(email,username,gender,role,result,health ) {
+    constructor(email,username,gender,role,scenario,result,health ) {
             this.email= email;
             this.username = username;
             this.gender = gender;
             this.role = role;
+            this.scenario = scenario;
             this.result = result;
-            this.health = health;
+            this.score = score;
     }
 }
 
