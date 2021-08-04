@@ -6,11 +6,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("login_div").style.display = "none";
 
     var user = firebase.auth().currentUser;
+    var email_id = user.email;
+    if(user != null & email_id == "admin@nus.edu.sg"){
 
-    if(user != null){
-
-      var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
       window.location.href = "overview.html"
 
     }
